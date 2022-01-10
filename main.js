@@ -14,7 +14,6 @@ function randomRps(){
 //big function that plays the game. takes p1 as the input from user, and p2 from the random generator. p2 is the computer.
 //compares p1 and p2 to determine result.
 function play(){
-  p1 = document.getElementById('rps').value;
   p2 = randomRps();
   if (p1 == "rock" && p2=="rock"){
     result = "It's a tie";
@@ -40,6 +39,7 @@ function play(){
 //message displayer for RPS game. runs the play function which determines game outcome.
 //takes new values for p1, p2, and result and displays them as a full string sentence in corresponding html element.
 function displayMessage(){
+   p1 = document.getElementById('rps').value;
    play();
    message = "Computer: " + p2 + ". " + result;
    document.getElementById("message1").innerHTML = message;
@@ -47,6 +47,7 @@ function displayMessage(){
 
 //message displayer for MJP scissors game. similar to RPS message function, except it converts rock, paper and scissors to muk, jji, and ppa.
 function displayMJP(){
+  p1 = document.getElementById('mjp').value;
   play();
   var mjp = "";
   if (p2 == "rock"){
