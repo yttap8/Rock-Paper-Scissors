@@ -7,15 +7,21 @@
     <link rel="stylesheet" href="main.css">
   </head>
   <body>
-    <label for="rps">Choose your option:</label>
+    <label for="rps">Rock Paper Scissors:</label>
     <select name="rps" id="rps">
-      <option value="Rock">Rock</option>
-      <option value="Paper">Paper</option>
-      <option value="Scissors">Scissors</option>
+      <option value="rock">Rock</option>
+      <option value="paper">Paper</option>
+      <option value="scissors">Scissors</option>
     </select>
-    <button onclick= "">Play Rock Paper Scissors!</button>
-    <button onclick= "">Play Rock Paper Scissors Lizard Spock!</button>
-    <button onclick= "">Play Mook-jji-ppa!</button>
+    <label for="rps">Muk-Jji-Ppa:</label>
+    <select name="rps" id="rps">
+      <option value="rock">Muk</option>
+      <option value="paper">Ppa</option>
+      <option value="scissors">Jji</option>
+    </select>
+    <p id ="message">Message</p>
+    <button onclick= "displayMessage()">Play Rock Paper Scissors!</button>
+    <button onclick = "displayMJP()">Play Mook-jji-ppa!</button>
     <div>
       <p>Player 1</p>
       <img id="p1" src = "img/Rock-paper-scissors_(paper).png"></img>
