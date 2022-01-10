@@ -6,10 +6,12 @@ body{
 }
 
 label{
-  font-weight: bold;
   text-decoration:underline;
 }
 
+p{
+  font-style: italic;
+}
 .header {
   padding: 10px;
   text-align: center;
