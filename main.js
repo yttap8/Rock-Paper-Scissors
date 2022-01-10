@@ -1,15 +1,18 @@
-
-var options = ["rock", "paper", "scissors"]
+//Global variables that are accessed in several functions. Empty strings to start.
 var result = "";
 var p1 = "";
 var p2 = "";
 var message = "";
 
+//Function that randomly generates rock, paper or scissors. Works by generating random number corresponding to array value
+var options = ["rock", "paper", "scissors"]
 function randomRps(){
   var num = Math.floor(Math.random()*3);
   return options[num];
 }
 
+//big function that plays the game. takes p1 as the input from user, and p2 from the random generator. p2 is the computer.
+//compares p1 and p2 to determine result.
 function play(){
   p1 = document.getElementById('rps').value;
   p2 = randomRps();
@@ -34,12 +37,15 @@ function play(){
   }
 }
 
+//message displayer for RPS game. runs the play function which determines game outcome.
+//takes new values for p1, p2, and result and displays them as a full string sentence in corresponding html element.
 function displayMessage(){
    play();
    message = "Computer: " + p2 + ". " + result;
    document.getElementById("message1").innerHTML = message;
 }
 
+//message displayer for MJP scissors game. similar to RPS message function, except it converts rock, paper and scissors to muk, jji, and ppa.
 function displayMJP(){
   play();
   var mjp = "";
