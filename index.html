@@ -7,26 +7,33 @@
     <link rel="stylesheet" href="main.css">
   </head>
   <body>
-    <label for="rps">Rock Paper Scissors:</label>
-    <select name="rps" id="rps">
-      <option value="rock">Rock</option>
-      <option value="paper">Paper</option>
-      <option value="scissors">Scissors</option>
-    </select>
-    <label for="rps">Muk-Jji-Ppa:</label>
-    <select name="rps" id="rps">
-      <option value="rock">Muk</option>
-      <option value="paper">Ppa</option>
-      <option value="scissors">Jji</option>
-    </select>
-    <p id ="message">Message</p>
-    <button onclick= "displayMessage()">Play Rock Paper Scissors!</button>
-    <button onclick = "displayMJP()">Play Mook-jji-ppa!</button>
-    <div>
-      <p>Player 1</p>
-      <img id="p1" src = "img/Rock-paper-scissors_(paper).png"></img>
+    <div class="header">
+      <h1>AP CSP: Rock Paper Scissors / Muk-Jji-Ppa</h1>
+      <h3>Patrick Wu</h3>
     </div>
-      <p>Player 2</p>
-      <img id="p1" src = "img/Rock-paper-scissors_(paper).png"></img>
+    <br>
+    <div class="row">
+      <div class="column" style="background-color: lightblue;">
+        <label for="rps">Rock Paper Scissors:</label><br>
+        <select name="rps" id="rps" style = "height: 30px; width: 150px; font-size: 20px">
+          <option value="rock">Rock</option>
+          <option value="paper">Paper</option>
+          <option value="scissors">Scissors</option>
+        </select>
+        <button onclick= "displayMessage()" style = "height: 30px; width: 300px; font-size: 20px">Play Rock Paper Scissors!</button><br>
+        <p id ="message1">[Result]</p>
+      </div>
+      <div class="column" style="background-color:lightgreen; ">
+        <label for="rps" >Muk-Jji-Ppa:</label><br>
+        <select name="rps" id="rps" style = "height: 30px; width: 150px; font-size: 20px">
+          <option value="rock">Muk</option>
+          <option value="paper">Ppa</option>
+          <option value="scissors">Jji</option>
+        </select>
+        <button onclick = "displayMJP()" style = "height: 30px; width: 300px; font-size: 20px">Play Mook-jji-ppa!</button>
+        <p id ="message2">[Result]</p>
+      </div>
+    </div>
+
   </body>
 </html>

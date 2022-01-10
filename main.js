@@ -14,42 +14,42 @@ function play(){
   p1 = document.getElementById('rps').value;
   p2 = randomRps();
   if (p1 == "rock" && p2=="rock"){
-    result = "tie";
+    result = "It's a tie";
   }else if (p1 == "paper" && p2=="paper"){
-    result = "tie";
+    result = "It's a tie";
   }else if (p1 == "scissors" && p2=="scissors"){
-    result = "tie";
+    result = "It's a tie";
   }else if (p1 == "rock" && p2=="paper"){
-    result = "player 2 wins";
+    result = "You lost.";
   }else if (p1 == "rock" && p2=="scissors"){
-    result = "player 1 wins";
+    result = "You won!";
   }else if (p1 == "scissors" && p2=="rock"){
-    result = "player 2 wins";
+    result = "You lost.";
   }else if (p1 == "scissors" && p2=="paper"){
-    result = "player 1 wins";
+    result = "You won!";
   }else if (p1 == "paper" && p2=="rock"){
-    result = "player 1 wins";
+    result = "You won!";
   }else if (p1 == "paper" && p2=="scissors"){
-    result = "player 2 wins";
+    result = "You lost.";
   }
+}
+
+function displayMessage(){
+   play();
+   message = "Computer: " + p2 + ". " + result;
+   document.getElementById("message1").innerHTML = message;
 }
 
 function displayMJP(){
   play();
   var mjp = "";
   if (p2 == "rock"){
-    mjp = "muk";
+    mjp = "Muk";
   }else if (p2 == "paper"){
-    mjp = "ppa";
+    mjp = "Ppa";
   }else if (p2 == "scissors"){
-    mjp = "jji";
+    mjp = "Jji";
   }
-  message = "Computer: " + mjp + ", " + result;
-  document.getElementById("message").innerHTML = message;
-}
-
-function displayMessage(){
-   play();
-   message = "Player 1: " + p1 +", Player 2: " + p2 + ", " + result;
-   document.getElementById("message").innerHTML = message;
+  message = "Computer: " + mjp + ". " + result;
+  document.getElementById("message2").innerHTML = message;
 }
